@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>２年で４回目のバリ島へ ─ 拠点スタイル旅のススメ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ヘッダー -->
+  <header class="app-header">
+    <div class="header-inner">
+      <h1 class="blog-title">バリ島旅行記 <span>2025.11</span></h1>
+      <div class="header-right">
+        <button type="button" class="toc-btn" id="tocBtn" aria-label="目次へ戻る">目次</button>
+        <span class="slide-counter" id="slideCounter">1 / 24</span>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </header>
+
+  <!-- スライダー -->
+  <main class="slider-wrapper">
+    <div class="slides-track" id="slidesTrack">
+
+      <!-- ===== SLIDE 00: 目次 ===== -->
+      <article class="slide slide--no-photo">
+        <div class="slide-content">
+          <div class="toc-header">
+            <p class="toc-eyebrow">バリ島旅行記 2025.11</p>
+            <h1 class="toc-main-title">２年で４回目のバリ島へ</h1>
+            <p class="toc-sub">── ツアーじゃ味わえない"拠点スタイル旅"のススメ</p>
+            <p class="toc-author">by ともか</p>
+          </div>
+          <p class="toc-label">目 次</p>
+          <ol class="toc-list">
+            <li><button type="button" class="toc-item" data-slide="1"><span class="toc-num">01</span><span class="toc-body"><em class="toc-tag">はじめに</em><span class="toc-body-title">２年で４回目のバリ島へ</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="2"><span class="toc-num">02</span><span class="toc-body"><em class="toc-tag">出発</em><span class="toc-body-title">出発前のドキドキ：無人セルフカウンター初体験</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="3"><span class="toc-num">03</span><span class="toc-body"><em class="toc-tag">出発</em><span class="toc-body-title">深夜の関空トイレ事情と、19番ゲートへ</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="4"><span class="toc-num">04</span><span class="toc-body"><em class="toc-tag">フライト</em><span class="toc-body-title">機内での過ごし方とシンガポール到着</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="5"><span class="toc-num">05</span><span class="toc-body"><em class="toc-tag">乗り継ぎ</em><span class="toc-body-title">チャンギ国際空港 T1 → T2：ChatGPTフル活用でラウンジへ</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="6"><span class="toc-num">06</span><span class="toc-body"><em class="toc-tag">乗り継ぎ</em><span class="toc-body-title">Ambassador Transit Lounge（チャンギ T2）で朝ごはん</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="7"><span class="toc-num">07</span><span class="toc-body"><em class="toc-tag">バリ到着</em><span class="toc-body-title">デンパサール到着：バリ島入国とAll Indonesia</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="8"><span class="toc-num">08</span><span class="toc-body"><em class="toc-tag">移動</em><span class="toc-body-title">KONA Residence BALIへ：klookで空港送迎</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="9"><span class="toc-num">09</span><span class="toc-body"><em class="toc-tag">KONA</em><span class="toc-body-title">拠点ヴィラ KONA Residence BALI 到着</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="10"><span class="toc-num">10</span><span class="toc-body"><em class="toc-tag">チャングー</em><span class="toc-body-title">初日後半：MAJA Canggu へ（チャングー泊）</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="11"><span class="toc-num">11</span><span class="toc-body"><em class="toc-tag">チャングー</em><span class="toc-body-title">MAJA Cangguチェックイン</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="12"><span class="toc-num">12</span><span class="toc-body"><em class="toc-tag">チャングー</em><span class="toc-body-title">チャングー徒歩散策：Pepito・両替・Desa Kitsuné・ビーチクラブ巡り</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="13"><span class="toc-num">13</span><span class="toc-body"><em class="toc-tag">チャングー</em><span class="toc-body-title">11月6日：MAJAで朝食 → プール → SPA → ローカル市場 → La Brisa Bali</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="14"><span class="toc-num">14</span><span class="toc-body"><em class="toc-tag">チャングー→サヌール</em><span class="toc-body-title">11月7日：MAJA最終日 → バビグリン → Segara Village Hotel へ</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="15"><span class="toc-num">15</span><span class="toc-body"><em class="toc-tag">サヌール</em><span class="toc-body-title">Segara Village Hotel とサヌールの遊歩道・ICON BALI MALL・ローカルSPA・Pasar Sindhu</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="16"><span class="toc-num">16</span><span class="toc-body"><em class="toc-tag">サヌール</em><span class="toc-body-title">11月8日：サヌールの朝日 → 無料ビーチヨガ → 巨大ブッフェ → Massimo → 冷えたビンタン事件</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="17"><span class="toc-num">17</span><span class="toc-body"><em class="toc-tag">ウブド</em><span class="toc-body-title">11月9日：ウブド日帰りツアー</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="18"><span class="toc-num">18</span><span class="toc-body"><em class="toc-tag">KONA</em><span class="toc-body-title">11月9日夜〜10日：KONA Residence BALI 本格滞在開始</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="19"><span class="toc-num">19</span><span class="toc-body"><em class="toc-tag">クタ</em><span class="toc-body-title">11月10日夕方：クタのスポーツバーでSingaraja Pilsner → The Iron Fairies へ</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="20"><span class="toc-num">20</span><span class="toc-body"><em class="toc-tag">最終日</em><span class="toc-body-title">最終日：KONAでのんびり → DIKA＆YUKIに見送られて出発</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="21"><span class="toc-num">21</span><span class="toc-body"><em class="toc-tag">帰国</em><span class="toc-body-title">帰りのフライト：Scoot → シンガポール → BACHA COFFEE → 日本へ</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="22"><span class="toc-num">22</span><span class="toc-body"><em class="toc-tag">帰国</em><span class="toc-body-title">関空到着 → akippa駐車場 → Uber → 日本の温泉＆ラーメンで締め</span></span></button></li>
+            <li><button type="button" class="toc-item" data-slide="23"><span class="toc-num">23</span><span class="toc-body"><em class="toc-tag">まとめ</em><span class="toc-body-title">まとめ：ツアーじゃ味わえない"拠点スタイル"バリ旅の良さ</span></span></button></li>
+          </ol>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 01 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide01.jpg" alt="バリ島旅行 2025年11月" loading="eager">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">はじめに</span>
+          <h2>２年で４回目のバリ島へ</h2>
+          <p class="subtitle">── ツアーじゃ味わえない"拠点スタイル旅"のススメ</p>
+          <p>こんにちは、ともかです。気づけば、バリ島は今回で５回目。内訳はこんな感じです。</p>
+          <ul>
+            <li>１回目：25年前、まだ若かったころの初バリ</li>
+            <li>２回目：2024年5月</li>
+            <li>３回目：2024年10月</li>
+            <li>４回目：2025年5月</li>
+            <li>５回目：そして今回、2025年11月</li>
+          </ul>
+          <p>この２年だけで４回バリに通ってみて「あ、これはツアーじゃ絶対味わえない楽しみ方やな」と、だんだん分かってきました。</p>
+          <p>今回の旅は、「KONA Residence BALI（Kona Resort - Seminyak）」を拠点にしつつ、チャングー → サヌール → ウブド → そしてまた拠点へ戻るという"拠点スタイル旅"。</p>
+          <p>同じヴィラを"帰る場所"にしながら、あちこちの街に２泊ずつして、それぞれをじっくり味わう旅です。バリ島旅行をこれから計画している方に、ツアーにはない、ちょっとディープで、ちょっと勇気のいるバリの楽しみ方を、できるだけ時系列で、会話込みで書いてみます。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 02 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide02.jpg" alt="関西国際空港 セルフチェックイン" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">出発</span>
+          <h2>出発前のドキドキ：無人セルフカウンター初体験</h2>
+          <p>2025年11月4日 夜。関西国際空港 第2ターミナルから、シンガポール航空でバリへ向かうことに。</p>
+          <ul>
+            <li>フライト：2025/11/4 23:20 関空発</li>
+            <li>まずはシンガポール・チャンギ国際空港で乗り継ぎ</li>
+            <li>そのあとデンパサール（ングラ・ライ国際空港）へ</li>
+          </ul>
+          <p>22時前には関空に到着し、第2ターミナルのカウンターへ向かうと…カウンター、まさかの無人。全部セルフ。</p>
+          <p>「これ、大丈夫か？？？」</p>
+          <p>前回まではスタッフさんが全部チェックしてくれていたので、いきなり不安全開です（笑）でも、よく見ると周りにはちゃんとスタッフさんがいて、困ったらすぐ来てくれる雰囲気。「これはひとまず落ち着こう」と自分に言い聞かせます。</p>
+          <p>私はシンガポール航空のアプリで事前に自動チェックイン。アプリを適当にポチポチしていたら（笑）、なんとかQRコードが表示されて、それをセルフ機にかざすだけで搭乗券が発券されました。友達の「ゆめ」の分も同じアプリから簡単に発券。セルフでも意外とあっさり完了です。</p>
+          <h3>荷物預けもセルフで</h3>
+          <ul>
+            <li>その場で荷物タグが印刷される</li>
+            <li>自分でスーツケースにペタっと貼る</li>
+            <li>コンベアにコロコロ転がして乗せる</li>
+            <li>重さも自動で表示されて、そのまま流れていく</li>
+          </ul>
+          <p>途中からスタッフさんがサッと寄ってきて、タグの貼り方もコンベアへの乗せ方も全部手伝ってくれたので、結果まったく問題なし（笑）</p>
+          <h3>手荷物検査と"毎回もったいない水問題"</h3>
+          <ul>
+            <li>モバイルバッテリーとPCは必ず機内持ち込み</li>
+            <li>Apple Watchをつけたままゲートを通って「ブーーー」</li>
+          </ul>
+          <p>そして恒例の、「ペットボトルの水は、飲み切るか捨ててくださいね」のルール。毎回、「せっかく買った水をここで捨てるって、どうなん…？」と思いながらも、ルールなので仕方なし。</p>
+          <p>ただ、保安検査を抜けた先、だいたいトイレ付近には給水機が何か所かあります。ペットボトルそのものは持ち込めるので、中身だけ捨てて、中で<strong>無料で給水</strong>という手もあります。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 03 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide03.jpg" alt="深夜の関空 19番ゲート" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">出発</span>
+          <h2>深夜の関空トイレ事情と、19番ゲートへ</h2>
+          <p>最終便に近い時間になると、関空のトイレは正直けっこう荒れます。トイレットペーパーが散乱していたり、「あ〜、一日の終わり感…」がすごい。</p>
+          <p>その点、シンガポール航空で使ったチャンギ国際空港のトイレは、夜中でもピカピカ。お店も24時間営業？と思うくらい、どこも元気に開いていました。</p>
+          <p>この日の関空からの便はほぼ最終、ゲートは <strong>「19番」</strong>。</p>
+          <ul>
+            <li>空港に着いたら掲示板チェック</li>
+            <li>荷物を預けたらまた掲示板チェック</li>
+            <li>搭乗口・バゲージクレームの番号も掲示板チェック</li>
+          </ul>
+          <p><strong>「まず掲示板！」</strong> これは本当に大事です。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 04 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide04.jpg" alt="シンガポール航空 機内" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">フライト</span>
+          <h2>機内での過ごし方とシンガポール到着</h2>
+          <p>シンガポール航空は、ブランケット・枕・機内食・飲み物（アルコールもOK）・シートモニターで映画やドラマが全部ついていて、とても快適。</p>
+          <p>私は白ワインをいただきつつ、事前にダウンロードしておいたNetflixで"推しドラマ"を満喫しました。推しが誰かは…ここでは内緒（笑）</p>
+          <p>Bluetoothイヤホンがなぜか使えず、手持ちの有線イヤホンで対応。そういうところはアナログです。</p>
+          <p>約６時間のフライトのあと、<strong>シンガポール・チャンギ国際空港（ターミナル1）</strong>に到着。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 05 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide05.jpg" alt="チャンギ国際空港" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">乗り継ぎ</span>
+          <h2>チャンギ国際空港 T1 → T2：ChatGPTフル活用でラウンジへ</h2>
+          <p>チャンギは T1・T2・T3 とターミナルが分かれていて、とにかく広い。今回の次のフライトはT2発。しかも、プライオリティパスで入れるラウンジ「Ambassador Transit Lounge（T2）」を予約していたので、早めにT2へ移動します。</p>
+          <h3>T1 → T2 無料シャトルバス</h3>
+          <ul>
+            <li>T1に到着</li>
+            <li>空港内の案内に従って、無料シャトルバス乗り場へ</li>
+            <li>シャトルでT2へ移動</li>
+          </ul>
+          <p>前回の私は、「英語できへんし、ラウンジどこか分からんし…」と空港内で迷子になりかけましたが、今回はChatGPTという強い味方がいます。</p>
+          <p><strong>私がChatGPTに聞いたこと：</strong></p>
+          <ul>
+            <li>「シンガポール航空利用で、プライオリティパスが使えるラウンジはどこ？マップが欲しい」</li>
+            <li>「私のチケットだと、T1に着いたあとどう移動したらいい？」</li>
+            <li>「Ambassador Transit Loungeはターミナル2のどこ？」</li>
+            <li>「ターミナル2内で、ラウンジまでの詳しい行き方を教えて」</li>
+          </ul>
+          <p>そうすると、「今いるのは2Fだから、エレベーターで3Fに上がってください」という感じで、かなり細かくルートを教えてくれる。前回は"フロアが違う"ことにすら気づいてなかったので、今回は本当にスムーズにたどり着けました。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 06 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide06.jpg" alt="Ambassador Transit Lounge チャンギ空港" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">乗り継ぎ</span>
+          <h2>Ambassador Transit Lounge（チャンギ T2）で朝ごはん</h2>
+          <p><strong>Ambassador Transit Lounge（T2）</strong>では、</p>
+          <ul>
+            <li>ブッフェ形式の朝ごはん</li>
+            <li>ドリンクいろいろ</li>
+            <li>シャワーもあり</li>
+          </ul>
+          <p>トランジット時間は約３時間。ここでしっかりお腹いっぱい食べてしまいました。</p>
+          <p>「あれ？このあとまた機内食やんな？」と内心ツッコミつつも、それはそれ、これはこれ（笑）</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 07 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide07.jpg" alt="デンパサール空港 バリ島入国" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">バリ到着</span>
+          <h2>デンパサール到着：バリ島入国とAll Indonesia</h2>
+          <p>チャンギからさらに約３時間乗って、<strong>バリ島・ングラ・ライ国際空港（デンパサール国際空港）</strong>に到着。11月5日 朝11:05ごろ。機内食でお腹いっぱいのまま、６か月ぶりのバリへ。空港内の巨大なガルーダ像が「また来たね」と迎えてくれる感じです。</p>
+          <h3>2025年時点の入国手続きと「All Indonesia」</h3>
+          <p>以前までは e-VOA・E-CD・SSHP・LOVE BALI と、４つの手続きが全部バラバラ。それぞれ申請できるタイミングも違っていて、「え～、こんなにいっぱいするの？？？」と、行く前から不安しかありませんでした。</p>
+          <p>それが今は「<strong>All Indonesia</strong>」という新しいシステムで、e-VOA・E-CD・SSHP この３つが一括申請できるようになりました。しかも前よりも入力項目がシンプルで、写真や帰りのチケットPDFも不要になっていて超ラク。</p>
+          <p>最悪、空港で手書き申請もできます（英語苦手な私は選びませんが…）。</p>
+          <h3>荷物受け取りと、空港内コンビニでビンタン確保</h3>
+          <p>入国審査もスムーズに進み、あっという間にバゲージクレームへ。…が、ここからが長い。荷物がなかなか出てこない。空港着：11:05 → チャーター車（klook）に乗り込んだのは：12:49。約1時間半かかりました。これでも"スムーズなほう"だと思います。</p>
+          <p>そして、忘れてはいけないのが、空港内コンビニでの<strong>"初ビンタン儀式"</strong>。ビンタンビール・フレッシュフルーツ・おつまみをしっかり買い込んで、チャーター車に乗り込みます。</p>
+          <p>本当は「ヴィラに着いてから飲もう」と思っていたのに、結局、車の中で「着いたらすぐ動けんくなるやん」「とりあえず乾杯しよか」となって、移動中にビンタンで乾杯（笑）</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 08 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide08.jpg" alt="klook 空港送迎 スミニャック" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">移動</span>
+          <h2>KONA Residence BALIへ：klookで空港送迎</h2>
+          <p>空港から<strong>KONA Residence BALI（Kona Resort - Seminyak）</strong>までは約13km。渋滞がなければ30分ほど。今回は、事前にklookで空港送迎を予約しました。</p>
+          <ul>
+            <li>金額：約1,033円</li>
+            <li>ドライバーさんはよくしゃべる</li>
+            <li>明日の予定やツアーをめちゃくちゃ勧めてくる（笑）</li>
+          </ul>
+          <p>バリのドライバーあるあるで、klookのドライバーさんは特に営業トークがすごいです。「明日どこ行く？どこ行きたい？ツアーする？」毎回のことなので、にこやかにかわします。</p>
+          <h3>注意：KONA Residence BALIの場所入力</h3>
+          <p>「KONA Residence BALI」は、klookやGrabでピンを立てるときにそのままの名称では出てこないことが多いです。私はいつも、近くの「Indramaya Bali Kos」など、手前のホテルを目的地に設定して、着いたら「that that！」と指差しでKONAの方へ誘導という荒業で、無事たどり着いています（笑）</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 09 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide09.jpg" alt="KONA Residence BALI 拠点ヴィラ" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">KONA</span>
+          <h2>拠点ヴィラ KONA Residence BALI 到着</h2>
+          <p class="subtitle">── でもこの日は荷物を置くだけ</p>
+          <p>KONA Residence BALIに到着すると、最初に出迎えてくれたのが、この旅のキーマン、<strong>DIKA（ディカ）君</strong>。まずはお部屋のお掃除中→チェックイン対応→WhatsAppを交換して、滞在中の連絡手段をセット。</p>
+          <p>「何かあれば何でも言ってくださいね」と、にこにこ話しかけてくれます。最初は、「いやいや、そんな頼むことないし…」と思っていたのですが、結果的に滞在中ずっと、私たちのコンシェルジュになってくれました。掃除・買い物・タオル補充・洗い物・出発到着サポート。全部してくれる。こんな贅沢ある？</p>
+          <p>ただ、この日はKONAには泊まらず、荷物だけ置いて、初日はチャングーのブティックヴィラ「MAJA Canggu」に２泊する予定。必要な下着や水着だけリュックに詰めて、夕方Grabを呼んでチャングーへ。</p>
+          <p>「荷物置きに来ただけで、初日から別のヴィラ泊まるって、どんな贅沢やねん」と自分たちでツッコミながら移動開始です。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 10 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide10.jpg" alt="Grab チャングー移動" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">チャングー</span>
+          <h2>初日後半：MAJA Canggu へ（チャングー泊）</h2>
+          <p>KONAからMAJA Cangguまでは約7.5km、時間にして40分ほど。夕方の渋滞ピークの時間だったので、道はぎっしり。Grab料金はRp 81,400（約783円／1円＝104Rp）。バリの移動は本当に安いです。</p>
+          <p>車の中では、バリ２回目のゆめが、カタコト＋勢いだけの英語でドライバーに話しかけまくり。</p>
+          <ul>
+            <li>ドライバーさんは日本語も少し話せる</li>
+            <li>逆に「これは日本語で何て言うの？」と単語をいっぱい聞いてくる</li>
+          </ul>
+          <p>「いや〜、あれはすごい。勉強熱心。」と思うと同時に、日本のタクシードライバーとの温度差も感じます。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 11 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide11.jpg" alt="MAJA Canggu ヴィラ スイートルーム" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">チャングー</span>
+          <h2>MAJA Cangguチェックイン</h2>
+          <p class="subtitle">── 外はローカル、内側は"白いお城"</p>
+          <p>ネットで見たMAJA Cangguのイメージは、南国感・海の近く・カップルだらけのロマンチックヴィラ…だったのですが、実際に着いてみると、外はバイクだらけのローカルな通り、目の前にはワルン、「え、ここ？ほんまに？」という入口。正直、最初はちょっと不安になります。</p>
+          <p>でも、中に一歩入ると世界が一変。白を基調にした建物、中庭プールを囲むようなレイアウト、壁に囲まれた"別世界感"。外のガヤガヤとのギャップがすごいです。</p>
+          <h3>スイートルームに２泊</h3>
+          <p>MAJAは部屋数が多くなく、その中の1室だけがスイートルーム。キッチン・リビング付き、ベッドはキングサイズが1台。</p>
+          <p>最初は、「２人で１台のキングサイズベッドって大丈夫なん…？」と不安でしたが、実際に寝てみると、想像以上に広くて問題なし。バリに何度も通ううちに、「このサイズなら全然アリやな」と感覚が変わってきました。</p>
+          <p>アメニティは、シャンプーはあるけど、リンス系・歯ブラシ・スリッパ・テレビはなし。でもセキュリティボックスだけは必ずある。「ホテル」というより完全に<strong>"ヴィラ暮らし"</strong>です。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 12 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide12.jpg" alt="チャングー Desa Kitsuné The Lawn ビーチクラブ" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">チャングー</span>
+          <h2>チャングー徒歩散策：Pepito・両替・Desa Kitsuné・ビーチクラブ巡り</h2>
+          <p>MAJAから出てすぐのところには、スーパー「Pepito（ペピト）」と「Frestive Supermarket（ワインショップ併設）」が徒歩圏内にあります。今回は、ガイドのアモ君無しで、初めて自力で両替。レート1円＝104Rp、特にトラブルなし。</p>
+          <p>「チャングーってどこ通っても小洒落てるで」と聞いていたものの、実際は工事中の建物ばかりで、「まだこれから"完成していく街"なんやな」という印象。そんな中で一気に"おしゃれスイッチ"が入るのが「<strong>Desa Kitsuné</strong>」。ブティック・レストラン・雑貨が集まった複合スポットです。</p>
+          <h3>夕食＆サンセット狙いで「The Lawn Canggu Beach Club」へ</h3>
+          <p>少し時間が遅く、波がかなり高く砂浜のテーブル席もクローズ。チャングーのビーチはサヌールと違い、「砂浜を散歩する」というより、ビーチクラブで楽しむスタイル。白人客がほとんどで、雰囲気は"めちゃくちゃオシャレなビアガーデン"という感じでした。</p>
+          <h3>2軒目：モダン居酒屋「YUKI Canggu」</h3>
+          <p>The Lawnのすぐ向かいにあった<strong>「YUKI Canggu」</strong>にもハシゴ。提灯・刺身メニュー・"モダンジャパニーズ居酒屋"という感じで大人気。ここでも日本人客は見かけませんでした。</p>
+          <p>帰りはFrestive Supermarketに寄って買い出し。Yellow TailがRp 480,000で、「いや、それならビンタンでええわ」と即決。おつまみに買ったmade in Bali のビーフジャーキーがめちゃくちゃ美味しくて、ビンタンとの相性が最高でした。深夜にMAJAへ戻ると、プールも照明も神秘的。カップルが深夜プールで泳いでいましたが、私たちは「いや、寒いしムリ」となり、見るだけで終了（笑）</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 13 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide13.jpg" alt="MAJAプール La Brisa Bali Love Anchor" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">チャングー</span>
+          <h2>11月6日：MAJAで朝食 → プール → SPA → ローカル市場 → La Brisa Bali</h2>
+          <p>朝、カーテンを開けると土砂降りの雨。「うそやん～」と思っていたら、朝食の9時にはすっかり快晴。持ってるな、と自画自賛。</p>
+          <p>前日にメニューを選んでおくスタイルで、コンシェルジュが部屋まで朝食を運んでくれます。「スムージー頼んだけど大丈夫かな？氷入ってるで～」と若干ビビりながら飲んだアサイースムージーが激うま。</p>
+          <p>２年間で４回バリに来ていながら、実は今まで一度も水着を着たことがなかった私。でも、MAJAのガラス張りの部屋から目の前に広がるプールを見て、「ここに泊まって入らへん選択はないやろ」となり、ついにプールデビュー。体型を気にしているのは自分だけで、ようやく"恥ずかしい"を手放せました。※このブログにその写真を載せるかどうかは、また別問題（笑）</p>
+          <h3>値切り天国「Love Anchor Canggu」</h3>
+          <p>おみやげ・雑貨が並ぶ<strong>「Love Anchor Canggu」</strong>。値札がほぼ無く、全部「いくら？」からスタート。</p>
+          <blockquote>店員さん：「ALL 2000000Rp + 600000Rp」<br>ゆめ：「NO〜〜〜！」</blockquote>
+          <p>と値切り合戦スタート。最終的に1,300,000Rpで決着。1つあたり約1,000円でいいお土産が買えました。</p>
+          <h3>夕日チャレンジ第２弾「La Brisa Bali | Beach Club」</h3>
+          <p>息子からおすすめされていた<strong>「La Brisa Bali | Beach Club」</strong>へ。２階の一番安い席でもテーブルチャージ Rp 800,000。ゆめ「テーブルチャージ8000円？？？」私「いや、料理代として使えるから実質フードクレジットやで」と説明。</p>
+          <p>１階席の料金を見たらRp 10,000,000とか書いてあって、「もう笑うしかない世界」でした。きれいな夕日は見られなかったものの、木材をふんだんに使った建物がとても素敵で、"世界観を味わう"には十分な時間でした。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 14 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide14.jpg" alt="バビグリン ローカルワルン Segara Village Hotel" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">チャングー→サヌール</span>
+          <h2>11月7日：MAJA最終日 → バビグリン → Segara Village Hotel へ</h2>
+          <p>「どうする～？」「食べる？」「お腹、痛くなるかな～」と毎回同じ会話をしながらも、ワルンへのチャレンジは今日もパス。チェックアウトしてKONA Residence BALIへ戻ると、DIKA君がせっせと部屋とプールを掃除してくれていました。「この生活、なんなん？」</p>
+          <h3>KONA近くのローカルワルンで"初バビグリン"</h3>
+          <p>「せっかくバリに来たなら、ローカルなバビグリンを食べよう！」ということで、徒歩10分ほどのバビグリンのローカルワルンへ。店の前はバイクだらけ、旅行者らしき人はゼロ。「大丈夫かな～？」と自分に言い聞かせながら注文。</p>
+          <ul>
+            <li>NASI BABI GULING BIASA</li>
+            <li>Sate（豚の串焼き）</li>
+            <li>kulit（豚の皮）</li>
+            <li>ビンタンビール（大瓶しかなく、2人でシェア）</li>
+          </ul>
+          <p>「バビグリンってこんなに辛いんや！」という新しい発見もあり、甘いタレのサテしか知らなかった私には衝撃の美味しさでした。この経験で完全に自信がつき、「もうなんでも食べられるんちゃう？」という謎の無敵モードに突入します（笑）</p>
+          <h3>夕方、サヌール「Segara Village Hotel」へ</h3>
+          <p>「ほんまにこの先にリゾートホテルある？」と思いながらロータリーを曲がると、そこには別世界のリゾート空間が。緑いっぱい・小さな動物たち・３つのプール・目の前は海。MAJAが"大人カップル向け"とするなら、Segara Villageは<strong>"ファミリー＆３世代向けリゾート"</strong>という感じです。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 15 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide15.jpg" alt="サヌール ビーチプロムナード Pasar Sindhu" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">サヌール</span>
+          <h2>Segara Village Hotel とサヌールの遊歩道・ICON BALI MALL・ローカルSPA・Pasar Sindhu</h2>
+          <p>チェックイン後、一番海側にあるバー兼レストランへ。屋根はあるけどほぼ屋外、鳥が普通に飛んできて自然と一体化しています。</p>
+          <h3>サヌールの海沿い遊歩道（ビーチプロムナード）</h3>
+          <p>砂浜沿いにずっと続く遊歩道、カフェやレストラン・ワルンがずらっと並んで、１時間くらい平気で歩ける楽しさ。途中でビーチサンダルが壊れ、その瞬間を見逃さない現地のおばちゃんたちに囲まれて、一斉にサンダルを売り込まれるのも、いい思い出です。値切り合戦の末、50,000Rpで購入。壊れたサンダルはおばちゃんに「これ捨てといて〜」と渡し、ゆめが横で大爆笑していました。</p>
+          <h3>ローカルSPA「Ayudia Salon and Spa」</h3>
+          <p>20代くらいの女の子２人で切り盛り、とても人懐っこくてかわいい。フットマッサージ１時間 100,000Rp（約1,000円）。翌日の夕方もここにリピート。</p>
+          <h3>サヌールのナイトマーケット「Pasar Sindhu」</h3>
+          <p>Ayudiaのスタッフに教えてもらって行ってみると、そこはサヌールのナイトマーケット「<strong>Pasar Sindhu（パサール シンドゥ）</strong>」。観光客もローカルも混ざって賑わう市場で、ナシゴレン・ミーゴレン・ビンタンビールを注文。今まで食べてきたナシゴレンとは全然違う、あっさり＋ピリ辛な大ヒット。カタコト英語でも十分コミュニケーションは取れることを再確認しました。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 16 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide16.jpg" alt="サヌールの朝日 ビーチヨガ Massimo" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">サヌール</span>
+          <h2>11月8日：サヌールの朝日 → 無料ビーチヨガ → 巨大ブッフェ → Massimo → 冷えたビンタン事件</h2>
+          <p>この日は「サヌールの朝日を見よう」と決めて、AM5:00起床。実際にビーチまで行ってみると、雲の間からきれいな朝日がしっかり顔を出してくれて、思わず「信じたもん勝ちやな」と言ってしまうくらいの景色でした。</p>
+          <h3>サヌールのビーチヨガ（無料・毎朝AM7:00）</h3>
+          <p>5時起き → 朝日鑑賞 → 7時にヨガというなかなかタフなスケジュール。現地の人が中心で、レッスン内容はわりと本気＆上級者寄り。私はホテルのバスタオル持参で、完全に"旅行客感"満載で参加。1時間のヨガでしっかり筋肉痛コースでした。</p>
+          <h3>有名イタリアン「Massimo Italian Restaurant」</h3>
+          <p>サヌールで有名なイタリアン。ジェラートが大人気で行列ができることも多い。ここで日本人ご夫婦と出会い、いろいろと現地情報を教えてもらいました。</p>
+          <h3>コンビニの冷えビンタンとGrabの"５分は５分じゃない"問題</h3>
+          <p>「５分くらいやったら、こっちでええか」と安い方のGrabを選んだところ、渋滞にはまって全然来ない。ビールがぬるくなる不安が募る中、</p>
+          <blockquote>私：「定員さんに、冷たいのと交換できるか聞いてきて〜。若くて優しそうやし、いけるで〜」<br>ゆめ：（本当に聞きに行く）</blockquote>
+          <p>最終的には苦笑いで手を振られ、あっさり却下されました（笑）この一件で、「<strong>５分は５分で着くって意味じゃない（あくまで目標）</strong>」ということを学びました。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 17 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide17.jpg" alt="ウブド コーヒー農園 バビグリン Ibu Oka 木彫り" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">ウブド</span>
+          <h2>11月9日：ウブド日帰りツアー</h2>
+          <p>ガイドはおなじみのアモ君。ロータリーでの半年ぶりの再会は、「ともかっさ〜ん！」「ゆめぇ〜！」と全力で手を振ってくれる姿が嬉しい。</p>
+          <h3>Lumbung Sari House Of Luwak Coffee（コーヒー農園）</h3>
+          <p>３回目ともなると、コーヒー農園の説明内容はほぼ暗記済み（笑）。案内スタッフさんは日本語を一生懸命勉強中で、手に日本語のカンニングメモを書いていて、とにかく可愛い。試飲コーナーでは15種類くらいが無料で出てきて、雨の中アモ君の「ゆっくりしていったらいいよ〜」の一言に甘えて、ほぼ全部試飲。雄のコピ・ルアクと雌のコピ・ルアクを１杯ずつ注文してシェア。私的には雄のほうが好みでした。</p>
+          <h3>Warung Babi Guling Ibu Oka 2（バビグリン専門店）</h3>
+          <p>ちなみに店名を日本語訳すると、Warung（屋台）・Babi Guling（豚の丸焼き）・Ibu（お母さん）・Oka（オカちゃん）→ 「<strong>オカちゃんのお母さんの屋台</strong>」という、なんとも親しみやすい名前です（笑）</p>
+          <h3>Pura Goa Gong（洞窟の寺院）＆ Karya Mas Wood Carving（木彫り工房）</h3>
+          <p>洞窟状になった入口とバリの彫刻。職人さんが実際に彫っているところを見学。大きな彫刻ばかりに心惹かれるあたり、自分の物欲のクセを再確認しました（笑）</p>
+          <h3>夕食はスミニャックの「Mie 88」</h3>
+          <p>ゆめが以前から「ミー行きたい」「ミー行きたい」と言い続けていた場所。スープも気にせず普通に頼んでいる自分たちに笑いました。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 18 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide18.jpg" alt="KONA Residence BALI 拠点ヴィラ本格滞在 ドラゴンフルーツ" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">KONA</span>
+          <h2>11月9日夜〜10日：KONA Residence BALI 本格滞在開始</h2>
+          <p>長い道のりを経て、ようやく「KONA Residence BALI」に泊まる日。初めてちゃんと荷物を広げて、「あ〜、帰ってきた〜」という気持ちになります。ここからが、拠点ヴィラライフの本番です。</p>
+          <h3>11月10日午前：日本の支払い日とネットバンキング</h3>
+          <p>「海外からネットバンキング、ほんまにちゃんと使えるん？」という不安は当日まで消えず。実際に試してみると、問題なく決済完了。「なるほど。これで今後も"支払い日バリ旅"いけるわ」という手応えも得ました。</p>
+          <h3>KONAでの過ごし方：朝ごはん・プール・昼寝・家仕事</h3>
+          <p>KONAでの朝は、ドラゴンフルーツを切る（真っ赤で映える）・ヨーグルトを添える・ビンタンビールのグリーンボトルを並べるだけで<strong>"映え朝ごはんセット"</strong>の完成。</p>
+          <ul>
+            <li>プールで泳ぐ</li>
+            <li>ソファでうたた寝</li>
+            <li>洗濯機で洗濯</li>
+            <li>小腹が空いたら炊飯器で炊いたお米でおにぎり</li>
+          </ul>
+          <p>"暮らすように泊まる"ヴィラ滞在を満喫。電子レンジ・オーブン・ミキサー・炊飯器・洗濯機・ウォーターサーバーが揃っているのも最高です。その横でDIKA君は黙々と掃除や洗い物をしてくれていて、「こんな生活、一度味わったら戻れへんのちゃう？」</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 19 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide19.jpg" alt="クタ スポーツバー The Iron Fairies Singaraja" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">クタ</span>
+          <h2>11月10日夕方：クタのスポーツバーでSingaraja Pilsner → The Iron Fairies へ</h2>
+          <p>ヌサドゥア在住の友達がクタまで会いに来てくれることになり、久々に街へ。KONAからGrabを呼んだものの、またしてもドライバーが来ないパターン。「どうしよ～、完全に遅刻やん…」と焦っていたら、横でゆめが突然爆笑。「ともかちゃんごめん！時間30分間違えてた〜」旅あるあるの"ハプニングからの軟着陸"でした。</p>
+          <h3>クタのスポーツバーでSingaraja Pilsner</h3>
+          <p>そこで初めて飲んだのが「<strong>Singaraja Pilsner（シンガラジャ・ピルスナー）</strong>」。ビンタンより少し大人っぽい味。５本まとめて出てくる"ホール"で提供されるスタイルで、「５本くらい飲むでしょ？」と言われて「はい！」と返事してしまう私たち。</p>
+          <h3>The Iron Fairies（ジ・アイアン・フェアリーズ）</h3>
+          <p>宮崎駿の世界のような内装、薄暗くて写真では伝わりきらない世界観、大人のクラブという感じで音楽も落ち着いた雰囲気。シーシャを楽しんでいる人たちもいて、「次は絶対シーシャもトライしたいな」と思いながら、スタッフや他のお客さんともカタコト英語で会話。<strong>"英語が完璧じゃなくても楽しめる夜"</strong>を過ごしました。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 20 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide20.jpg" alt="DIKA君 KONA 最終日 見送り" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">最終日</span>
+          <h2>最終日：KONAでのんびり → DIKA＆YUKIに見送られて出発</h2>
+          <p>最終日は、夜のフライト（20:05発）までヴィラでのんびり。夕方前に「今から空港に向かいますね」と連絡して外に出ると、なんとカッパ姿のDIKA君が外で待機していました。</p>
+          <blockquote>私：「え？私たちの見送りのために来てくれたん？家近いん？」<br>DIKA：「ここから90分です」</blockquote>
+          <p>毎日そんな距離を通ってくれていたと知って、改めて感動。日本側で旦那さんにこの話をしたら、「ディカ君、あんたを誰かわかってんの？」と言われ、「福永ですって言うたで〜」「それ伝えても、誰か分からんやろ（笑）」</p>
+          <p>どうやら、ただのうるさい日本人おばちゃんゲストに対してあのホスピタリティだったようです（笑）YUKIちゃんも見送りに来てくれて、Grabが来るかどうかを確認するために、DIKA君がメイン道路まで走って様子を見てくれたり、本当に最後の最後まで付き添ってくれました。車が見えなくなるまでずっと手を振ってくれて、泣きそうになりながらKONAを後にしました。</p>
+          <h3>空港送迎ゾーンの通行料と微妙な釣り銭</h3>
+          <p>最後のGrabに乗ったとき、送迎ゾーン通行料 Rp 12,000 が必要で、20,000Rpを渡すとそのまま受け取る。「いや、まだ30円足りてへんやん」という細かいツッコミを心の中でしながら、「まぁええか」とそのまま流しました（笑）</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 21 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide21.jpg" alt="Scoot フライト バリ シンガポール BACHA COFFEE" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">帰国</span>
+          <h2>帰りのフライト：Scoot → シンガポール → BACHA COFFEE → 日本へ</h2>
+          <p>帰りのバリ → シンガポールは、シンガポール航空のLCCである<strong>「Scoot」</strong>を利用。フライト時間は約3時間でテレビモニターなし。でも私はNetflix派なので問題なし。もともと機内食なしのはずが、なぜかついてきた（ラッキー）</p>
+          <p>正直、今回いろいろ食べて思ったのは、「<strong>機内食が一番おいしくない（笑）</strong>」ということ。ラウンジで食べるほうが断然クオリティが高いです。</p>
+          <h3>チャンギ空港・BACHA COFFEEで自分土産</h3>
+          <p>行きの時から気になっていた、チャンギ空港の「<strong>BACHA COFFEE</strong>」。ショップのデザインがとにかく可愛く、パッケージもオシャレ。いろんなフレーバーコーヒーが選べます。</p>
+          <p>ここで自分用に「CARAMELO MORNING」というフレーバーコーヒーを購入。キャラメルの香りで、朝ミルクを入れて飲むと最高。あとで調べたら、なかなか人気の銘柄だったようで、「やっぱり私は感覚で選ぶタイプやな」と改めて実感しました。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 22 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide22.jpg" alt="関空 akippa りんくうタウン 日本の温泉" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">帰国</span>
+          <h2>関空到着 → akippa駐車場 → Uber → 日本の温泉＆ラーメンで締め</h2>
+          <p>関空にはお昼ごろ到着。今回は車で来ていたのですが、関空の駐車場は予約が必要＆満車だったため、事前に<strong>「akippa」</strong>で駐車場を確保していました。</p>
+          <ul>
+            <li>駐車場所：りんくうタウン駅周辺のakippa駐車場</li>
+            <li>料金：1日約385円</li>
+            <li>そこから関空までは車で10分ほど</li>
+          </ul>
+          <p>関空⇔りんくう間の移動には、日本版Uberを利用。タクシーメーター：3,840円がUber支払い実質：1,133円という謎の割引構造で、「なんでこんなに安くなるんか、いまだによく分からん」という状態ですが、日本でもUber移動一択です。</p>
+          <p>最後は、ゆめを家まで送りつつ、途中の日本の温泉施設に立ち寄り、温泉で旅の疲れを癒し、併設のラーメン店で"日本の味"をすすってフィニッシュ。「ほんと、有意義な旅やったな」と２人でしみじみしながら解散しました。</p>
+        </div>
+      </article>
+
+      <!-- ===== SLIDE 23 ===== -->
+      <article class="slide">
+        <div class="slide-photo">
+          <img src="images/slide23.jpg" alt="バリ島 まとめ 拠点スタイル旅" loading="lazy">
+        </div>
+        <div class="slide-content">
+          <span class="slide-tag">まとめ</span>
+          <h2>まとめ：ツアーじゃ味わえない"拠点スタイル"バリ旅の良さ</h2>
+          <p>この旅であらためて感じたのは、拠点となるヴィラ（今回はKONA Residence BALI）が１つある安心感、そこをベースにチャングー・サヌール・ウブドを組み合わせることで、<strong>"ツアーでは味わえない、じっくり滞在型の旅"</strong>ができることです。</p>
+          <p>ツアーだと、行き先や食事が決まっていて、連れて行かれる場所も"ザ・観光地"が中心になりがちですが、今回のように自分たちでローカルワルン・ナイトマーケット・町スパ・ビーチヨガ・ローカルスーパーを開拓していくと、「<strong>勇気を出した分だけ、旅はおもしろくなる</strong>」ということがよく分かります。</p>
+          <p>このブログが、これからバリ島に行く人の参考になって、「ちょっとだけ勇気を出して、いつもより一歩だけローカルに踏み込んでみようかな」と思ってもらえたら嬉しいです。</p>
+          <div class="route-summary">
+            <h3>今回の旅のルート（全45ヶ所）</h3>
+            <ol>
+              <li>関西国際空港 第2ターミナル（KIX）</li>
+              <li>チャンギ国際空港 T1 → T2 無料シャトルバス移動</li>
+              <li>Ambassador Transit Lounge（チャンギ T2）</li>
+              <li>ングラ・ライ国際空港（デンパサール）</li>
+              <li>KONA Residence BALI（拠点ヴィラ）</li>
+              <li>MAJA Canggu（チャングー・2泊）</li>
+              <li>Pepito / Frestive Supermarket（チャングー）</li>
+              <li>Desa Kitsuné / The Lawn Canggu / YUKI Canggu</li>
+              <li>La Brisa Bali / Al Bacio Gelato Canggu / Love Anchor</li>
+              <li>KONAのバビグリンワルン</li>
+              <li>Segara Village Hotel（サヌール・2泊）</li>
+              <li>ビーチプロムナード / ICON BALI MALL</li>
+              <li>Ayudia Salon and Spa / Pasar Sindhu</li>
+              <li>サヌールビーチの朝日 / ビーチヨガ</li>
+              <li>Massimo Italian Restaurant</li>
+              <li>サヌールのローカルワルン（内臓系ナシチャンプル）</li>
+              <li>Lumbung Sari House Of Luwak Coffee</li>
+              <li>Warung Babi Guling Ibu Oka 2</li>
+              <li>Pura Goa Gong / Karya Mas Wood Carving</li>
+              <li>Bintang Supermarket / Mie 88</li>
+              <li>クタのスポーツバー / The Iron Fairies</li>
+              <li>チャンギ国際空港・BACHA COFFEE</li>
+              <li>関西国際空港（帰着）→ akippa → 温泉 → ラーメン</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /slides-track -->
+  </main>
+
+  <!-- ナビゲーション矢印 -->
+  <button class="nav-arrow nav-prev" id="navPrev" aria-label="前のスライド">&#8249;</button>
+  <button class="nav-arrow nav-next" id="navNext" aria-label="次のスライド">&#8250;</button>
+
+  <!-- ボトムナビゲーション（ドット） -->
+  <nav class="bottom-nav" aria-label="スライドナビゲーション">
+    <div class="nav-dots" id="navDots"></div>
+  </nav>
+
+</div><!-- /app -->
+<script src="script.js"></script>
+</body>
+</html>
