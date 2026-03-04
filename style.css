@@ -161,10 +161,17 @@ body {
   overflow: hidden;
 }
 
-/* デスクトップではアプリ幅（430px）に揃える */
+/* デスクトップではアプリ幅（980px）に揃え、横並びにする */
 @media (min-width: 769px) {
   .slide {
-    min-width: 430px;
+    min-width: 980px;
+    flex-direction: row; /* 写真左・テキスト右 */
+  }
+
+  /* 写真なしスライド（目次）は縦並びを維持 */
+  .slide--no-photo {
+    flex-direction: column;
+    min-width: 980px;
   }
 }
 
@@ -522,11 +529,29 @@ body {
 }
 
 /* ============================================================
-   Desktop（769px以上）: 矢印を非表示にしてキーボード操作
+   Desktop（769px以上）: 横長レイアウト
    ============================================================ */
 @media (min-width: 769px) {
   .app {
     height: 100vh;
+    max-width: 980px; /* PC用横長サイズ */
+  }
+
+  /* 写真エリアを左カラムに固定 */
+  .slide-photo {
+    flex: 0 0 45%;
+    height: 100%;
+  }
+
+  /* グラデーションを右端方向に変更 */
+  .slide-photo::after {
+    height: auto;
+    width: 60px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.12));
   }
 
   .nav-arrow {
@@ -534,12 +559,12 @@ body {
   }
 
   .slide-content h2 {
-    font-size: 19px;
+    font-size: 22px;
   }
 
   .slide-content p,
   .slide-content li {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
