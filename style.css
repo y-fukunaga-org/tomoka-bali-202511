@@ -555,7 +555,12 @@ body {
   }
 
   .nav-arrow {
-    display: none;
+    display: flex;
+    top: calc(var(--header-h) + 3px + (100vh - var(--header-h) - var(--nav-h) - 3px) / 2);
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    font-size: 26px;
   }
 
   .slide-content h2 {
