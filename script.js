@@ -80,24 +80,20 @@
 
   // --- タッチスワイプ ---
   // 縦スクロールと横スワイプを判別して処理を分岐する
-  // コンテンツエリア内のタッチはスワイプ判定をスキップ（iOS click 発火のため）
+  // テキストエリア内でも横スワイプはスライド移動、縦はコンテンツスクロール
   var touchStartX = 0;
   var touchStartY = 0;
-  var swipeDir       = null; // 'h' | 'v' | null
-  var touchInContent = false; // .slide-content 内から開始したか
+  var swipeDir = null; // 'h' | 'v' | null
 
   var wrapper = document.querySelector('.slider-wrapper');
 
   wrapper.addEventListener('touchstart', function (e) {
-    touchStartX    = e.touches[0].clientX;
-    touchStartY    = e.touches[0].clientY;
-    swipeDir       = null;
-    touchInContent = !!e.target.closest('.slide-content');
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    swipeDir    = null;
   }, { passive: true });
 
   wrapper.addEventListener('touchmove', function (e) {
-    // コンテンツエリア内はスワイプ判定しない（縦スクロール＋タップを優先）
-    if (touchInContent) return;
     if (swipeDir === null) {
       var dx = Math.abs(e.touches[0].clientX - touchStartX);
       var dy = Math.abs(e.touches[0].clientY - touchStartY);
@@ -113,7 +109,7 @@
   }, { passive: false });
 
   wrapper.addEventListener('touchend', function (e) {
-    if (touchInContent || swipeDir !== 'h') return;
+    if (swipeDir !== 'h') return;
     var diff = touchStartX - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 50) {
       if (diff > 0) goTo(current + 1); // 左スワイプ → 次へ
